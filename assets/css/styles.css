@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+:root {
+  --primary: #dddddd;
+  --primary-light: #ffffff;
+  --primary-dark: #d2d2d2;
+  --danger: #af0908;
+  --dark: #000000;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin: 10px 0 10px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.content {
+  background-color: var(--primary-light);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 600px;
+  max-width: 100%;
+}
+
+.password-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  margin: 10px 0;
+  height: 200px;
+  width: 100%;
+  border: 2px dashed var(--dark);
+  border-radius: 10px;
+}
+
+.password-container #password {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+}
+
+.password-container .btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+}
+
+span.password {
+  display: inline-block;
+}
+span.password:empty::before {
+  content: "Your secure password here";
+  display: inline-block;
+  color: var(--primary-dark);
+}
+
+.generate-btn-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  border: none;
+  border-radius: 20px;
+  background-color: var(--danger);
+  color: #fff;
+  font-size: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00aacc;
+  color: #ffffff;
+}
+
+button:disabled,
+button[disabled] {
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn-small {
+  display: block;
+  width: 35%;
+}
